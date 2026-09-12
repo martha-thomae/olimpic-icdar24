@@ -73,7 +73,7 @@ The module `app.evaluation` contains an implementation of the TEDn tree-edit-dis
 
 The file [`app.evaluation.TEDn`](app/evaluation/TEDn.py) implements the TEDn metric as a standalone python file with only the `zss` and `Levenshtein` dependencies, taking `xml.etree.ElementTree` elements as its inputs.
 
-But in practise, you want to use (or at least understand) the [`TEDn_lmx_xml.py`](app/evaluation/TEDn_lmx_xml.py) file, as it exposes a nicer string-based API and contains the necessary canonicalization, pre-processing and post-processing needed. This function depends on the `app.linearization` and `app.symbolic` modules.
+But in practice, you want to use (or at least understand) the [`TEDn_lmx_xml.py`](app/evaluation/TEDn_lmx_xml.py) file, as it exposes a nicer string-based API and contains the necessary canonicalization, pre-processing and post-processing needed. This function depends on the `app.linearization` and `app.symbolic` modules.
 
 > **Note:** The TEDn metric is computationally expensive, so you need to do the evaluation system-wise. It will not compute the error for a whole score, since the time and memory complexity goes through the roof. Evaluation of one system (cca 4 measures) takes from 30 to 120 seconds. The evaluation time seems to grow cca quadratically with the size of the trees.
 
