@@ -7,7 +7,7 @@ This repository contains the source code for the article:
 
 In which we:
 
-1. Create a dataset of synthetic and scanned pianoform music for end-to-end OMR, called OLiMPiC. The dataset is built upon the [OpenScore Lieder Corpus](https://github.com/OpenScore/Lieder).
+1. Create a dataset of synthetic and scanned pianoform music for end-to-end OMR, called OLiMPiC (see [Datasets](#datasets) section). The dataset is built upon the [OpenScore Lieder Corpus](https://github.com/OpenScore/Lieder).
 2. We introduce the LMX format (Linearized MusicXML) and define the linearization and delinearization procedures (see [MusicXML Linearization](#musicxml-linearization) section).
 3. We train a baseline, state-of-the-art model called Zeus on this dataset (see [Zeus model](#zeus-model) and [TEDn evaluation metric](#tedn-evaluation-metric) sections).
 4. We compare our dataset and model to the [GrandStaff dataset](https://link.springer.com/article/10.1007/s10032-023-00432-z).
@@ -50,7 +50,7 @@ All modules export a CLI `__main__.py` to execute certain commands. To learn mor
 
 The exact OpenScore Lieder scores in the train/dev/test partitions are defined in `app.datasets.splits.data` folder and can also be imported as a python module.
 
-The manual annotation process behind the `scanned` OLiMPiC dataset dataset was powered by Inkscape and CLI commands `load-workbench` and `save-workbench`. The first one creates a `workbench.svg` inkscape file, then the user annotates the bounding boxes, and then the second command consumes the file and updates corresponding dataset values.
+The manual annotation process behind the `scanned` OLiMPiC dataset was powered by the open-source vector graphics editor _Inkscape_ and CLI commands `load-workbench` and `save-workbench`. The first command creates a `workbench.svg` inkscape file, then the user annotates the bounding boxes in Inkscape, and then the second command consumes the file and updates corresponding dataset values.
 
 Screenshot from the annotation process:
 
